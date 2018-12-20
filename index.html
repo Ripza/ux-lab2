@@ -10,26 +10,38 @@
 <body>
 
     <main class="grid">
-        <img src="./img/img1.jpg" alt="Sample photo">
-        <img src="./img/img2.jpg" alt="Sample photo">
-        <img src="./img/img4.jpg" alt="Sample photo">
-        <img src="./img/img5.jpg" alt="Sample photo">
-        <img src="./img/img13.jpeg" alt="Sample photo">
-        <img src="./img/img7.jpeg" alt="Sample photo">
-        <img src="./img/img8.jpg" alt="Sample photo">
-        <img src="./img/img9.jpeg" alt="Sample photo">
+        <img src="./img/img1.jpg" alt="Peyo 1">
+        <img src="./img/img2.jpg" alt="Peyo 2">
+        <img src="./img/img4.jpg" alt="Peyo 3">
+        <img src="./img/img5.jpg" alt="Peyo 4">
+        <img src="./img/img13.jpeg" alt="Peyo 5">
+        <img src="./img/img7.jpeg" alt="Peyo 6">
+        <img src="./img/img8.jpg" alt="Peyo 7">
+        <img src="./img/img9.jpeg" alt="Peyo 8">
         <div class="svgs">
-            <img src="./img/svg-dog.svg" alt="Sample photo">
-            <img class="bone-dog" src="./img/bone.png" alt="Sample photo">
+            <img src="./img/svg-dog.svg" alt="Peyo 9">
+            <img class="bone-dog" src="./img/bone.png" alt="Peyo hueso">
         </div>
-        <img src="./img/img6.jpeg" alt="Sample photo">
+        <img class="santa" src="./img/santa.jpg" alt="Peyo 10">
 
         <div class="svgs-xmas-background">
-                <img class="xmas-hat" src="./img/hat.png" alt="Sample photo">
+                <img class="xmas-hat" src="./img/hat.png" alt="Peyo 11">
         </div>
 
-        <img class="mokey" src="./img/mokey.png" alt="Sample photo">
+        <img class="mokey" id="mokey" src="./img/mokey.png" alt="Peyo 12">
       </main>
+        <audio id="asd" src="./sounds/ohboy.mp3">
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+      <script>
+      $(".mokey").mouseenter(function() {
+        
+        var audio = document.getElementById("asd");
+        audio.play();
+      });
+      </script>
     </body>
 
 </html>

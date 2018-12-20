@@ -111,10 +111,15 @@
   animation-iteration-count: infinite;
  }
 
- .mokey {
+ .santa:hover {
+   animation:santa-animation 1s;
+   animation-fill-mode: forwards;
+  }
+
+ .mokey:hover {
   animation:mokey-animation 1s;
   animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
+  /*animation-iteration-count: infinite;*/
  }
 
  @keyframes xmas-animation{
@@ -132,12 +137,15 @@
 
  @keyframes bone-animation{
   0%{
+    opacity: 0;
     transform: rotate(1000deg) scale(0.5);
   }
   50%{
+    opacity: 1;
     transform: translateY(-70px) rotate(190deg) scale(1.5);
   }
   100%{
+    opacity: 0;
     transform: translateY(0px) rotate(1000deg)  scale(0.5);
   }
 }
@@ -147,8 +155,17 @@
     transform: rotate(0deg);
   }
   to{
-    transform: rotate(359deg) scale(1, 4);
+    transform: rotate(359deg) scale(1, 6);
   }
+}
+
+@keyframes santa-animation{
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0 ; transform: rotate(360deg);
+  } 
 }
 
 
