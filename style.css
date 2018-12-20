@@ -1,20 +1,22 @@
-div{
-    background-color: teal;
-}
-
 .grid { 
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   grid-gap: 1px;
   align-items: start;
   justify-items: stretch;
   align-items: stretch;
   }
+
 .grid img {
   max-width: 100%;
 }
+
 .grid img:nth-child(2) {
   grid-column: span 4;
+  grid-row: span 2;
+}
+.grid img:nth-child(3) {
+  grid-column: span 1;
   grid-row: span 2;
 }
 
@@ -26,5 +28,16 @@ div{
 .grid img:nth-child(6) {
   grid-column: span 2;
   grid-row: span 2;
+}
+
+.grid img:nth-child(8) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+
+.grid img:nth-child(14) {
+  grid-column: span 2;
+  grid-row: span 1;
 }
 
