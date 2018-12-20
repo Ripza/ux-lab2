@@ -1,14 +1,32 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en">
-
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Galería SVG UX</title>
-</head>
-
-<body>
-    <div>This is my web page</div>
-</body>
-
-</html>
+<!doctype html>
+<title>Example</title>
+<style>
+.grid { 
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1px;
+  align-items: start;
+  justify-items: center;
+  }
+.grid img {
+  max-width: 100%;
+}
+.grid img:nth-child(2) {
+  grid-column: span 3;
+  grid-row: span 3;
+  }
+</style>
+<main class="grid">
+  <img src="/pix/samples/22m.jpg" alt="Sample photo">
+  <img src="/pix/samples/23l.jpg" alt="Sample photo">
+  <img src="/pix/samples/24m.jpg" alt="Sample photo">
+  <img src="/pix/samples/25m.jpg" alt="Sample photo">
+  <img src="/pix/samples/15m.jpg" alt="Sample photo">
+  <img src="/pix/samples/27m.jpg" alt="Sample photo">
+  <img src="/pix/samples/28m.jpg" alt="Sample photo">
+  <img src="/pix/samples/32m.jpg" alt="Sample photo">
+  <img src="/pix/samples/26m.jpg" alt="Sample photo">
+  <img src="/pix/samples/30m.jpg" alt="Sample photo">
+  <img src="/pix/samples/16m.jpg" alt="Sample photo">
+  <img src="/pix/samples/31m.jpg" alt="Sample photo">
+</main>
