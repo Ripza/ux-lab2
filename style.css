@@ -167,13 +167,3 @@
     opacity: 0 ; transform: rotate(360deg);
   } 
 }
-
-
-@keyframes trans-animation{
-  from{
-    transform:translateX(0px);
-  }
-  to{
-    transform:translateX(200px) translateY(200px) scale(1.5);
-  }
-}
