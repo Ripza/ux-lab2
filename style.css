@@ -7,13 +7,19 @@ div{
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 1px;
   align-items: start;
-  justify-items: center;
+  justify-items: stretch;
+  align-items: stretch;
   }
 .grid img {
   max-width: 100%;
 }
 .grid img:nth-child(2) {
-  grid-column: span 3;
-  grid-row: span 3;
+  grid-column: span 4;
+  grid-row: span 2;
 }
+
+.grid img:nth-child(4) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
 
