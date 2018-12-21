@@ -122,6 +122,17 @@
   /*animation-iteration-count: infinite;*/
  }
 
+ .heart-pug{
+   animation: heart-pug-animation 5s;
+   animation-iteration-count: infinite;
+ }
+
+ .sleepy-dog{
+  animation: sleepy-dog-animation 4s;
+  animation-iteration-count: infinite;
+  transform-style: preserve-3d;
+ }
+
  @keyframes xmas-animation{
   0%{
     transform: rotate(1000deg);
@@ -166,4 +177,43 @@
   to{
     opacity: 0 ; transform: rotate(360deg);
   } 
+}
+
+@keyframes heart-pug-animation{
+  0%{
+    transform: translateX(0px) translateY(0px);
+  }
+  20%{
+    transform: translateX(100px) translateY(0px);
+  }
+  40%{
+    transform: translateX(100px) translateY(100px); 
+  }
+  60%{
+    transform: translateX(-100px) translateY(100px);
+  }
+  80%{
+    transform: translateX(-100px) translateY(0);
+  }
+  100%{
+    transform: translateX(0px) translateY(-0);
+  }
+}
+
+@keyframes sleepy-dog-animation{
+  0%{
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  25%{
+    transform: rotate3d(0, 1, 1, 90deg);
+  }
+  50%{
+    transform: rotate3d(0, 1, 1, 180deg);
+  }
+  75%{
+    transform: rotate3d(0, 1, 1, 270deg);
+  }
+  100%{
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
 }
