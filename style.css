@@ -133,6 +133,12 @@
   transform-style: preserve-3d;
  }
 
+ .big-dog{
+  animation: big-dog-animation 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+ }
+
  @keyframes xmas-animation{
   0%{
     transform: rotate(1000deg);
@@ -216,4 +222,10 @@
   100%{
     transform: rotate3d(0, 0, 1, 360deg);
   }
+}
+
+@keyframes big-dog-animation {
+  0% {transform: scale(0)}
+  50% {transform: scale(1.5)}
+  100%{transform: scale(0)}
 }
