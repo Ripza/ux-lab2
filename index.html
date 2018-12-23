@@ -8,35 +8,6 @@
     </head>
 
 <body>
-    <!--Filtros SVG-->
-    <svg>
-        <filter id="samoyedo-filter">
-            <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="1" result="warpper"/>
-            <feColorMatrix in="warpper" type="hueRotate">
-                    <animate attributeType="XML" attributeName="values" values="0;110;150;210;360" dur="5s" repeatCount="indefinite"/>
-            </feColorMatrix>
-            <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="70" in="SourceGraphic"/>
-        </filter>
-        <filter id="doge-filter">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
-        </filter>
-        <filter id="heart-pug-filter" x="0" y="0" width="200%" height="200%">
-            <feOffset result="offOut" in="SourceAlpha" dx="20" dy="20" />
-            <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
-            <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
-        </filter>
-        <filter id="mouse-filter">
-            <feColorMatrix type="matrix" in="SourceGraphic" values="-1 2 -3 0 -.5 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
-        </filter>
-        <filter id="santa-filter" filterUnits="objectBoundingBox">
-            <feColorMatrix id="luminance-value" type="luminanceToAlpha" in="SourceGraphic"/>
-        </filter>
-        <filter id="big-dog-filter">
-            <feColorMatrix type="hueRotate" values="90"/>
-        <filter/>
-    </svg> 
-
-
     <!--Grilla CSS-->
     <main class="grid">
         <img class="doge-background" src="./img/img1.jpg" alt="Peyo 1">
@@ -60,18 +31,80 @@
         <img class="mokey" id="mokey" src="./img/mokey.png" alt="Peyo 12">
       </main>
 
+    <!--Filtros SVG-->
+    <svg>
+        <filter id="samoyedo-filter">
+            <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="1" result="warpper"/>
+            <feColorMatrix in="warpper" type="hueRotate">
+                    <animate attributeType="XML" attributeName="values" values="0;110;150;210;360" dur="5s" repeatCount="indefinite"/>
+            </feColorMatrix>
+            <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="70" in="SourceGraphic"/>
+        </filter>
+    </svg>
+    <svg>
+        <filter id="doge-filter">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
+        </filter>
+    </svg>
+    <svg>
+        <filter id="heart-pug-filter" x="0" y="0" width="200%" height="200%">
+            <feOffset result="offOut" in="SourceAlpha" dx="20" dy="20" />
+            <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+            <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+        </filter>
+    </svg>
+    <svg>
+        <filter id="mouse-filter">
+            <feColorMatrix type="matrix" in="SourceGraphic" values="-1 2 -3 0 -.5 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
+        </filter>
+    </svg>
+    <svg>
+        <filter id="santa-filter" filterUnits="objectBoundingBox">
+            <feColorMatrix id="luminance-value" type="luminanceToAlpha" in="SourceGraphic"/>
+        </filter>
+    </svg>
+    <svg>
+        <filter id="big-dog-filter">
+            <feColorMatrix type="hueRotate" values="90"/>
+        <filter/>
+    </svg>
+    <svg>
+        <filter id="peludo-filter">
+            <feGaussianBlur stdDeviation="2.00"/>
+        <filter/>
+    </svg>
+    <svg>
+        <filter id="sleepy-dog-filter">
+            <feMorphology operator="dilate" radius="6" />
+        </filter>
+    </svg>
+    <svg>
+        <filter id="example-filter">
+            <feFlood x="4" y="4" height="2" width="2"/>
 
-     <audio id="ohboy" src="./sounds/ohboy.mp3">
-     <script
-        src="https://code.jquery.com/jquery-3.3.1.js"
-        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous"></script>
-     <script>
-        $(".mokey").mouseenter(function() {
+            <feComposite width="10" height="10"/>
             
-            var audio = document.getElementById("ohboy");
-            audio.play();
-        });
+            <feTile result="a"/>
+            
+            <feComposite in="SourceGraphic" in2="a" 
+                            operator="in"/>
+            
+            <feMorphology operator="dilate"
+                            radius="5"/>
+        </filter>
+    </svg>
+
+    <!--Otros-->
+    <audio id="ohboy" src="./sounds/ohboy.mp3">
+    <script
+       src="https://code.jquery.com/jquery-3.3.1.js"
+       integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+       crossorigin="anonymous"></script>
+    <script>
+       $(".mokey").mouseenter(function() {       
+           var audio = document.getElementById("ohboy");
+           audio.play();
+           });
     </script>
     
     </body>
