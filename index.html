@@ -8,18 +8,27 @@
     </head>
 
 <body>
+    <!--Filtros SVG-->
+    <svg>
+        <defs>
+            <filter id="doge-filter">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
+            </filter>
+        </defs>
+    </svg>
 
+    <svg>
+        <defs>
+            <filter id="heart-pug-filter" x="0" y="0" width="200%" height="200%">
+                    <feOffset result="offOut" in="SourceGraphic" dx="20" dy="20" />
+                    <feBlend in="SourceGraphic" in2="offOut" mode="normal" />
+            </filter>
+        </defs>
+    </svg>
+
+    <!--Grilla CSS-->
     <main class="grid">
-
-        <svg class="doge-background">
-            <defs>
-                <filter id="pictureFilter">
-                    <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
-                </filter>
-            </defs>
-            <image filter="url(#pictureFilter)" xlink:href="./img/img1.jpg" width="100%" height="100%" x="0" y="0" />
-        </svg>
-        
+        <img class="doge-background" src="./img/img1.jpg" alt="Peyo 1">
         <img class="heart-pug" src="./img/img2.jpg" alt="Peyo 2">
         <img class="mouse" src="./img/img4.jpg" alt="Peyo 3">
         <img class="sleepy-dog" src="./img/img5.jpg" alt="Peyo 4">

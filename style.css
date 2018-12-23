@@ -128,6 +128,8 @@
  }
 
  .heart-pug{
+   -webkikt-filter: url('#heart-pug-filter'); 
+   filter: url('#heart-pug-filter');
    animation: heart-pug-animation 5s;
    animation-iteration-count: infinite;
  }
@@ -145,6 +147,8 @@
  }
 
  .doge-background{
+   -webkikt-filter: url('#doge-filter'); 
+   filter: url('#doge-filter');
    background-image: url('./img/img1.jpg');
    background-size: cover;
  }
