@@ -117,6 +117,8 @@
  }
 
  .santa:hover {
+   -webkikt-filter: url('#santa-filter'); 
+   filter: url('#santa-filter');
    animation:santa-animation 1s;
    animation-fill-mode: forwards;
   }
@@ -128,7 +130,6 @@
  }
 
  .heart-pug{
-   -webkikt-filter: url('#heart-pug-filter'); 
    filter: url('#heart-pug-filter');
    animation: heart-pug-animation 5s;
    animation-iteration-count: infinite;
@@ -147,13 +148,13 @@
  }
 
  .doge-background{
-   -webkikt-filter: url('#doge-filter'); 
    filter: url('#doge-filter');
    background-image: url('./img/img1.jpg');
    background-size: cover;
  }
 
  .samoyedo{
+   filter: url('#samoyedo-filter');
    animation: samoyedo-animation 10s;
    animation-iteration-count: infinite;
  }
@@ -164,6 +165,7 @@
 }
 
 .mouse:hover{
+  filter: url('#mouse-filter');
   animation: mouse-animation 5s;
   animation-iteration-count: infinite;
 }
@@ -254,8 +256,11 @@
 }
 
 @keyframes big-dog-animation {
-  0% {transform: scale(0)}
-  50% {transform: scale(1.5)}
+  0% {transform: scale(0);}
+  50% {
+    transform: scale(1.5);
+    filter: url('#big-dog-filter');
+  }
   100%{transform: scale(0)}
 }
 
