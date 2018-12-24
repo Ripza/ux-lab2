@@ -103,6 +103,7 @@
 }
 
 .svgs-xmas-background{
+  filter: url('#huerotate-pug');
   background-image: url('./img/img14.jpeg');
   background-size: cover;
 
