@@ -93,6 +93,17 @@
                             radius="5"/>
         </filter>
     </svg>
+    <svg>
+      <filter id="huerotate-pug">
+        <feComponentTransfer result="tablas">
+        <feFuncR type="table" tableValues="1 0 1" exponent="5"/>
+        <feFuncG type="table" tableValues="1 0 1" exponent="2"/>
+        <feFuncB type="table" tableValues="1 0 1" exponent="5"/>
+        </feComponentTransfer>
+        <feColorMatrix type="saturate" in="tablas" in2="SourceGraphic" values="-5"/>
+       </filter>
+    </svg>
+
 
     <!--Otros-->
     <audio id="ohboy" src="./sounds/ohboy.mp3">
