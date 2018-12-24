@@ -19,7 +19,7 @@
         <img class="samoyedo" src="./img/img8.jpg" alt="Peyo 7">
         <img class="peludo" src="./img/img9.jpeg" alt="Peyo 8">
         <div class="svgs">
-            <img src="./img/svg-dog.svg" alt="Peyo 9">
+            <img class="perrito-svg" src="./img/svg-dog.svg" alt="Peyo 9">
             <img class="bone-dog" src="./img/bone.png" alt="Peyo hueso">
         </div>
         <img class="santa" src="./img/santa.png" alt="Peyo 10">
@@ -103,7 +103,18 @@
         <feColorMatrix type="saturate" in="tablas" in2="SourceGraphic" values="-5"/>
        </filter>
     </svg>
+    <svg>
+        <filter id="svg-perrito-filter-clean">
+            <feGaussianBlur stdDeviation="0" />
+        <filter />
+    </svg>
 
+    <svg>
+        <filter id="svg-perrito-filter-blurry">
+            <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="2" result="turbulence_3" data-filterId="3" />
+            <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" in2="turbulence_3" scale="35" />
+        <filter />
+    </svg>
 
     <!--Otros-->
     <audio id="ohboy" src="./sounds/ohboy.mp3">

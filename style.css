@@ -308,3 +308,20 @@
     opacity: 1;
   }
 }
+
+.perrito-svg{
+  animation: svg-perrito-filtro 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes svg-perrito-filtro{
+0%{
+  filter:url('#svg-perrito-filter-blurry');
+}
+50%{
+  filter:url('#svg-perrito-filter-clean');
+}
+100%{
+  filter:url('#svg-perrito-filter-blurry');
+}
+}
